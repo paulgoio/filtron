@@ -4,4 +4,4 @@ RUN cd / && wget https://raw.githubusercontent.com/searx/searx-docker/master/rul
 
 FROM dalf/filtron:latest
 
-COPY mkdir -p /etc/filtron/ && mv /rules.json /etc/filtron/
+RUN mkdir -p /etc/filtron/ && mv /rules.json /etc/filtron/
