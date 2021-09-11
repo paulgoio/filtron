@@ -8,7 +8,6 @@
     {
         "name": "image_proxy",
         "filters": ["Param:url", "Path=^/image_proxy$"],
-        "actions": [{ "name": "log"}],
         "subrules": [
             {
                 "name": "allow Firefox Android (issue #48 and #60)",
@@ -82,7 +81,7 @@
             {
                 "name": "IP limit",
                 "interval": 1,
-                "limit": 400,
+                "limit": 1200,
                 "aggregations": ["Header:X-Forwarded-For"],
                 "actions": [
                     {"name": "block",
@@ -92,7 +91,7 @@
             {
                 "name": "IP and useragent limit",
                 "interval": 1,
-                "limit": 300,
+                "limit": 600,
                 "stop": true,
                 "aggregations": ["Header:X-Forwarded-For", "Header:User-Agent"],
                 "actions": [
