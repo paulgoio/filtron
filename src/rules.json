@@ -7,7 +7,7 @@
     },
     {
         "name": "image_proxy",
-        "filters": ["Param:url", "Path=^/image_proxy$"],
+        "filters": ["Path=^/image_proxy$"],
         "subrules": [
             {
                 "name": "allow Firefox Android (issue #48 and #60)",
