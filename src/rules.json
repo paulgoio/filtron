@@ -8,8 +8,7 @@
     {
         "name": "image_proxy",
         "filters": ["Param:url", "Path=^/image_proxy$"],
-        "stop": true,
-        "actions": [{ "name": "log"}]
+        "stop": true
     },
     {
         "name": "IP limit, all paths",
