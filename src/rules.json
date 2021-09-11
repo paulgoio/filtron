@@ -9,7 +9,10 @@
         "name": "image_proxy",
         "filters": ["Param:url", "Path=^/image_proxy$"],
         "stop": true,
-        "actions": [{"name": "shell", "params": {"cmd": "DUMMY=%v", "args": ["IP"]}}]
+        "actions": [
+            {"name": "shell",
+            "params": {"cmd": " export DUMMY=%v", "args": ["IP"]}}
+        ]
     },
     {
         "name": "IP limit, all paths",
