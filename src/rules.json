@@ -6,6 +6,18 @@
         "actions": [{ "name": "log"}]
     },
     {
+        "name": "image_proxy",
+        "filters": ["Param:q", "Path=^/image_proxy$"],
+        "stop": true,
+        "interval": 3,
+        "limit": 300,
+        "aggregations": ["Header:X-Forwarded-For"],
+        "actions": [
+            {"name": "block",
+             "params": {"message": "Rate limit exceeded, try again later."}}
+        ]
+    },
+    {
         "name": "IP limit, all paths",
         "interval": 3,
         "limit": 25,
