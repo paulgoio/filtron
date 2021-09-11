@@ -9,10 +9,7 @@
         "name": "image_proxy",
         "filters": ["Param:url", "Path=^/image_proxy$"],
         "stop": true,
-        "actions": [
-            { "name": "log",
-            "params": {"destination": "null"}}
-        ]
+        "actions": [{ "name": "log"}]
     },
     {
         "name": "IP limit, all paths",
