@@ -10,8 +10,8 @@
         "filters": ["Param:url", "Path=^/image_proxy$"],
         "stop": true,
         "actions": [
-            {"name": "shell",
-            "params": {"cmd": " export DUMMY=%v", "args": ["IP"]}}
+            { "name": "log",
+            "params": {"destination": "null"}}
         ]
     },
     {
