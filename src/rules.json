@@ -9,7 +9,13 @@
         "name": "image_proxy",
         "filters": ["Param:url", "Path=^/image_proxy$"],
         "stop": true,
-        "actions": [{ "name": "log"}]
+        "interval": 3,
+        "limit": 300,
+        "aggregations": ["Header:X-Forwarded-For"],
+        "actions": [
+            {"name": "block",
+             "params": {"message": "Rate limit exceeded, try again later."}}
+        ]
     },
     {
         "name": "IP limit, all paths",
