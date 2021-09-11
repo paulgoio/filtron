@@ -85,7 +85,7 @@
                 "aggregations": ["Header:X-Forwarded-For"],
                 "actions": [
                     {"name": "block",
-                     "params": {"message": "Rate limit exceeded, try again later."}}
+                     "params": {"message": "Rate limit exceeded, try again later (ip limit)."}}
                 ]
             },
             {
@@ -96,7 +96,7 @@
                 "aggregations": ["Header:X-Forwarded-For", "Header:User-Agent"],
                 "actions": [
                     {"name": "block",
-                     "params": {"message": "Rate limit exceeded, try again later."}}
+                     "params": {"message": "Rate limit exceeded, try again later (useragent limit)."}}
 		        ]
             }
         ]
