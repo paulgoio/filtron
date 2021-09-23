@@ -1,3 +1,5 @@
+# This repo is archived in favor of paulgoio/searx that has filtron built in now
+
 # Filtron
 
 dalf/filtron image with custom rules.json from https://raw.githubusercontent.com/searx/searx-docker/master/rules.json applied.
